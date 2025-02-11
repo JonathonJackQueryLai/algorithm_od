@@ -28,7 +28,6 @@ def func(num, coins: list):
             if sub == -1:
                 return -1
 
-
             res = min(sub + 1, res)
         # 字典
         meno[num] = res
@@ -54,7 +53,6 @@ def coinChange(amount: int, coins: list) -> int:
     for j in range(1, n):
         for i in range(1, amount):
             # 要不起
-
             if i < coins[j - 1]:
                 dp[i][j] = dp[i][j - 1]
                 continue

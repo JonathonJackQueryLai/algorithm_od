@@ -46,18 +46,17 @@ class Solution:
         l2 = [0 for _ in range(n)]
         res, s1, s2 = 0, 0, 0
         for i in range(len(queries) - 1, -1, -1):
-            #判断是否已经储存值，和应该放入l1还是l2
+            # 判断是否已经储存值，和应该放入l1还是l2
             if queries[i][0] == 0 and l1[queries[i][1]] == 0:
                 l1[queries[i][1]] = queries[i][2]
-                #计算当前res
-                res += queries[i][2]*(n - s2)
+                # 计算当前res
+                res += queries[i][2] * (n - s2)
                 s1 += 1
             elif queries[i][0] == 1 and l2[queries[i][1]] == 0:
                 l2[queries[i][1]] = queries[i][2]
-                res += queries[i][2]*(n - s1)
+                res += queries[i][2] * (n - s1)
                 s2 += 1
         return res
-
 
 
 def count1(self, num1: str, num2: str, min_sum: int, max_sum: int) -> int:
