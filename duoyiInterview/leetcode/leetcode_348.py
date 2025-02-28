@@ -6,6 +6,7 @@
 # @Software: PyCharm
 # @ Motto : 客又至，当如何
 
+from typing import List
 def minimizedStringLength(s: str) -> int:
     s = set(s).__len__()
     return s
@@ -37,6 +38,7 @@ def matrixs(n: int, queries: list) -> int:
     total_sum = sum(sum(arr, []))
 
     return total_sum
+
 
 
 class Solution:
